@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A CORE Construction planning tool for exploring Indiana school debt schedules, tax-rate capacity, assessed-value growth, and likely project financing windows."
+    />
+    <title>CORE | Indiana School Debt Forecaster</title>
+    <link rel="icon" type="image/png" href="data:image/png;base64,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" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <img class="core-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAbMAAADHCAIAAAAcSyqzAAAe4klEQVR42u2de1RU5d7Hf8p4lDEvjU7qy5iXUObYOieWmIRAgWZiI0OaHlK5adYqTzqA2lGpQ3PULEtuerRVJqBohwVdZpTELLEEyQIX1opmArN0TD1zmLw1mA35/rHfw+sVnhn2ntl7z/ez+sNF25F55pnv87s/3a5evUoAAACuoTuWAAAAoIwAAABlBAAAKCMAAEAZAQAAyggAAFBGAACAMgIAAJQRAACgjAAAAGUEAAAoIwAAQBkBAADKCCRJ8PARWAQAoIwAAABlBAAAKCMAAEAZAQAAyggAAFBGAACAMgIAAJQRAACgjAAAAGUEAAAoIwAAQBkBAED8tDqdNput1ensyososI4AAHkI4pa3tuwsKbHb7e0/TJ2XtnTZskCl0t1X63b16lWsKfnHrJ3mH45jHYAsqa+re+7ZhZwmxuv1sZMmVn2yf5fZzP3fnPw8fUIClBFAGYEfYbPZYqKi1Wr1nKSkBU8taLcQW53O8rLyTRs32u32isrKEG0IvGkAgF/Q5nLNmj6DiOYkJU1/fMafxtzL/Vyr1YZHPLAyK6tf/36ZhvS05OT9nx5gd6uRgQEASJjm5mOcEz03OYn7SWRUZE5+nsViKS4sqqiomDx5MhHZ7fbGxkZCbhrccK5yzgWWAsgMq9VCRPF6vUql4n6iUg2Iio6OjIokoqCgoEClMnVeGhE1ftMIb9rvcDgc9n/brVbLjz/8+P2xYw5HS011zQ3PtDsa7e7GqNGjVQNU94WGBgUFDRo8WKPRYCWBtDja0EBEsZMmtv9kl9nM5V5y8vPCxo0jokd1uuLCoiP19cmpKVBG+ZuBDQ0Njd80frzvo5tFkAWLxWKxWG74YWRU5Lj7x0+InDBmzBgPah0A8DL3hYYS0Zub32jPPhsyMs6d+7m4sGjt6jU6nS5AoSjZtp2IxoaFEXLTMrYNK3bt9lgN3UKr1SbOnh07aSJsSUDiTkwT0YHqg0QUExXN1eiYTaZMQ7ohI2PBUws4b8mt9DTijCSVKtYDVVXT4qaOHxtmzM72gixyRqUxOzsmKnpa3NTtxdscDgc+CCA2hgwezIUU33/3vWt/ziVedpaUlJeVE5FarQ4Ovgc2I8mphLUgL887UshiRS792/PR0dEBCsRhgIgcqfFjw4godV7aXxKfaDcMbTbb++++l5+by1mUbrk+UlVGm832y6VfrFbL+XPnj9TX038jrx38lXi9noi4hAMRhYRoe9/RW7R+YpvLVVFR8ebmN24OBfoctVq94oWsyZMnIxAJRILVYk1LTubKd7goUOk773DfHbVavXHzJi4VI0NltNlsR+rrjzY0HK79nF+x4FK0sZMmjg0LGzJ4sM+toVanc9++fWtXr7m2/VOccEEcQfXR4XCseskotjc+NiysX/9+3J/79u0bPGoUEYnhlM1YbPAfNRwbFnZtrrnN5dq5Y+e1IXitVjtl6tSFf13owZda1MrocDi+OnrU9P4HHRuD/BIZFfnw5EfGh4e71UvEF2aTSRKaeC3ZRuOcuXMEOlHa4+uSgOu7uC801FenbPDwEf6jjPF6fW5B/u22TRfXX4zKyKVf241hH5I6L+1RnS40NNQLW9xqsS5JTxeh78zoX3vgsMhPGW/eP9EPPhgeHu61sAOUkS9EpIxcgZ54sg3Xfu25lkyB3KVWp3Pl8hXetIuFM7fXvPIKv6skaWW89juclJIsxMkBZSQZT65tc7nMJlNUxITEmbPEJotEZLfb83NzueKV+ro6fl/8QFXVxIdiZCCLRFRTXRMTFW02mQhczy6zOXHmrIj7x2NxCDO9Gc2lDfkFIcGjMg3p4g+uWSyWxJmzpsVNPVBVxXUid/E8WGU0Lpg3X9A3PiEycpo+fpo+nogujujD/SfoKmUa0lOTktCjfcsjNtOQLsT5CuTjTXNVKZmGdIkunFarNa5e5bF/ZLPZZk2fwa8mTtPHT5w4iUuVqgaolNfHtoKHjziWNvq6z/633wMut/3h/K/dr/yuPPlLn+MXRRh5lIc3fcvIQ25BQfsQBHjTiDMSXT+AV+qfzZLnl7kbWTtQVbVg3nwe1XBsWJhmqKbT78wNyngziou//eH8r4GnnP2/PUc8lfUsMiyGMt4OD2ZNQxm9o4wK7+edV71klEdYjYh2mc0OR0txSQn7X9mQX8AV5XfRR57/5JPjHwhX8pr0dPXp4erTw6m5o+V+dS/75d4/XOyiRObn5p479/PKrCz0zNwu8nC0oQHrI0K8+nnwaCuRaNLWb7z5JnsA4eU1a4oLizz+5waqB67MeuHhRyYrha4C6d7t8qDAy4MCHWMH9j55qf/Xjp4/X/HslYoLi5qbmrYWFeHLj/UhZGBul22Q2fKVvf8eY6lam8s1Py3NY1kM0Wpz8vKqa2v1jyUovdiTd7VH90sj+9oShp+aOvTXO/9AnuasE6bFYyBFB+szPy2t6zk9IDFltNlsCdPiu2IrkViDRIwRRk4WPStIGqgeWFpeVlG5R/9YgsJ3ZsXlQYFd0UeLxaKbEgdxhDhCGak92RITFS3R1g7qMPrLGDvviiz+3fhSdW2tFyqE3dLHsw8OdgUGkPs1Kylz5uLLD3GEMlJ9XV3izFnyWzW1Wv3yK2sFlcVp+vivGr9JSU1ViC/8dGlk3xMzRpz7Y38PLEd8+TsWx03/3IR1kLkybsgvkKUsEtHGzZsYw4tLM5d4IIs5eXl5BQVKEc/4utqje0v4XaemDnXXeIRlRJ1l860WK9ZBtsrIS20KiXVMAKN7uyG/wN36pBCt9nB9nf6xBEksxeVBgSdmjHAOUborjkszlzA+PIDvWmjxk5acjJNDnsooY1lUq9Urs7IYIwnuLkJKWppp964BAwZIaEGu9uh+eorGETrA3TpQxg7iQKUy22gkP2sihE8tQ2X0QBEkxIoXmIpyHQ7Hc88uJPfaRdL//lK2QppFbT+HDjj98P+Qm0XOjG7jnLlz1Gq1v/nUaDyXlTLKNeVC/+2VZslHt7lcKXPmutX7WFpetsgg7WnMTs0d7oYd05KTWb7/AQrFxs1+Z0NteWsL5InkMVGi/Z4aucJ4K+Mqo9Gt4s3S8jLvTO7rtG+ah5P2smuo6UdFaxsxD1Zg7K3MWGzgt6mUu+XCg7/Y9N133qlCszY3udsYI1DftFarffrZZ8T2fQwKChLui6PgscslZc5cEllM8IGICL72cbxezyKLVotVhLLoNX7vpTj9iGao6UdizsaYTSYWS3zJ88v4Vcann32mK9McbDbb2TNnDtUc2llSItBslIaGBpHsjVGjR/M7+YL8p2/65TVrfFXOHa/Xjw0LG3r30OBRo5RKZQeTnVqdzhaHo7mp6eSJk0fq6z+vrWXf00ueX8ZyPKQlJ/utLHJcubPnqalDg/acZHx+7eo1LNcQajSaeL1ePLNINBqNRqMJGzdukWGxQDdVfFhRIb/t4V/KeKCqysvNf9w9VrGTJro1ASxQqdQoldxf4W4da3U6GxsbOz354/V6ln9o546d7FKbk5cn131/eVAguzja7faVy1ewjJPi3WzkixBtyO7KPbwH2YsLizCGh6SbgWl1Or02KkKtVmcbjV83flNcUpKcmtL1K0cClUru2K/98osvjtRvKdwaGRXpmcFos9mM2dnE3OIilaJFj8XRHq5mL+JhGXPNmY2ifcth48aVlpfx7lBDpKSqjCuXryCv5IVLy8tqv/wiOTVFoJvYVCpVTGxscUnJ143fZBuNWq22/Z9mkeD1615jL+d+PSdH9nvrwh/vZC8Cf+7ZhSzlzSxHlG/FcUvhVn4daoiUJJXRarEK7eBwmri7co/XfM9ApTI5NWV35Z6KysrUeWnr8/JYDEbGdRioHrhtR4nCP1yk05ODGOt47HZ7BYMKaDSa9hNLnMTExhoyMvh6NUcLphNJUBnbXK4l6elCT/rypibeHD96MTubJSXNbjC+8uo6aXW5dHEC7ulHNOypGBaz0bh6lcjf9CLDYr7ku+m77yBS0lPGiooK4fLRkVGRXxypl0StALvhPCEyMmZirF/tsCt39mScysNoNoaGhoq/JSZx9mzi6bpKiJTElLHN5Vq7eo1Av5YhI2NrUZFKItME2A1n4S70ETMt96sZfWoWszFAoZiTlCTytxw7aSLxVykMnZKSMlZUVAhU4JqTn7fIsFgqxQpWi5XxYM/Jy/MjP/p6n9oeOYjRbGTJxs5NFrsydr1qop3TZ85ApySjjMIZjKXlZdKqtv9o715iS7w8Ok3nt/vMqbmD8ZqEAoZ8l0qlEnkeBvipMjY0NAhhMEquJ6TN5WIcLLQy6wWFf5fs/ueBQYz9gizXxfAVyAOAT2XMfuFF3n+VbKNRcj0hjIW4fm4w0n9rvxnNxopduzt9Rhc/Dd9eIC5ldDgcvKfM4vV6rl1PWrC4fjAY3TUbN23cyOJQizlDbbPZ8HH7nTLu2F5CfNdyv56zXnJr53A4GO94gcHoltlot9tZhtqKeVXP8pc2EfN1QFDG69hZwrMyrs/Lk2Lb/FdHjxLbHQYwGNu5MLofy2NfHD7c6TPRDz4odWeC2JpWsW0koIxWi5Xf3EvqvDSWJhMRcvCzz1geS3wiEfusnYvBTMpY+s47nT4THh4uWlfas+vFgYSVkbFIhZ2ly5ZJdO1YBq+FaLUhqC+h627UYhkzYbFYOr0IIVCpFGGo0eFwzJo+g/iLv2PPSEMZ9+7ZQ7z2ugRKM4zCGGJPnP0ENtkNnL+XqVmwsbGx02ceiIgQmyzqpsQJ1AEBxKuMrU4nv1npBU8tkOjCHamvZ3lMtB6fD7k8sBfLY4dqDpEXm/DEKYuieoNQxi4d4+ROhDFQsnm3qk/2szx2T3AwNhnddFcMS4aaxTsJCRFLpKK+rk4Ia3FsWBg2DIn/tgOWY5ydvyRK2NNkGQ81TR+PrPQt+WVYn54/t1CXx8yo7/JxnJG7LSP7hRcFGorDY/91V/i8tjZjsfdu/U2Y/lhMbKyUlLHuyy+IvxpGiaak2b+3EydOggjeWlCGKKmhhcU/7bhmxfsVLVx8mbtk7eN9Hwmag06dlyaSz8tut3vzBh4xTG53Txl53AdTpk6V7hebMf0iaekXFJeSaePZ/23vVPvUarVnPmymIT3TkC7mVZK0U0VdGMwqBku5u1uOA4//8ITICdL98Bg7HAaKfsCqz5SxTw+Wx6xWi+TS03Cqusji9HSJZWBaHHxeSTFmzBjpfninTp1iecxPpzGywZKEOerHN+ct/dvzfviu1Wp1aGioxJSxuamJeL2FSrqf3/lz51lqvCF/HXClf0/i434oWda1xOv1Pk9B+IQ5SUkiaRR2QxkvXLiAyn5iLmYcNXoU5K8DnEN7YxFux4svZfvnGxfPtPbuPvlXR95zD3Y/6BRv5kPFQ2l5mX9OkYiMihTPG3dDGXkM+gwbPkz2H7NKhSAjkP9Ye5Jd7sVtZcSl4G4hkkAygCwSci8kcD0jYCczPT0zXVzlcvcUyfBad/E0CHZRFzZu3uS3skhiyr1AGYXl7IODL43sKypZbP7huHh+H/MHJl5ODpaaRxJ9JvrlV9YG+vfsbrHdlAtlFIoeF37DIoBOTcW16171zwIdEmvuBcoosDKev4JFAB1o4ooXsnQ6XQBmjogs9wJlBBIwJWT5vnLy86CJos29kLu5aR5HxTEONxQtqgG4tIi8cFW3XCuf3i0rO89f3wQh9+JbZezXvx95cbihmLmP4Yjrc/wiNj0J32wqxVO2prpm/Ngws8mEbUDiy734sgdGoDGfXqNvX6akc7fffse+p9tOQa7x81n/mYb0VUYjAibibPjp7qvCMcYRh+IkeBRTT3TA5TYo4C1xsk20CwoKIoZx09Jdh+LCIqvFSsi9kJRvO+h9R29+hzKIZJK7BwwZPJjlsV721ktsgwj9DcZ+qkEM6yz1i/rSkpOraw+JPBuj1WqffvYZIV5ZtMXtCl9dSVH1yX59QoJEd3OAQsEySrqn/bKoir3Fw/79n/ByAvE7TZl8dJHApn9uWmRYLOZfctTo0dL9tkqsameX2fx6znrpFi48EBHR6SSYO3642BJ+F3TwZj7+aB8xFHN0uj1OnDhJXbjrfPrjM+j2CaILFy5UfbLfC/N+8nNzF/51IYp4JKyM8Xo9jxvl4MGD0q3+Zxmkpmht637Z9Xsv7PjrcLlcLOkXlmsMutIaOGz4sA7cIO5/6RMSXs9Zv3PHTmN2ttA1TP7cNE1Sz03zmyssfPtt6S7cI1OmsDym/MmJTUYejbNj2WxeKNkJUCiSU1MOVB9UC3mrT8m27dgYElZGfu8Fr6mukW6GOjiYafhunyYU9JIH9TpEFBUdTaIpjNVoNNW1h4S75nSX2SyDmKn/KiNjTpad9eteI8kmYVh615SnnahqvMGVzs/NI4YgY6dlbq1OpzcLYwMUipVZWcJZjo2NjdgeUlVGRjlw66iUrtn48ORHmMzG5vPYZ+660o9O04lQSgIUiqLt2wUzpQ9he0i4B4ZRDtjJWr5comvHGHW98yvMQqdr8rB5LI89qtOJU0pCtCEC+dR79+zB9pCwMuripxHfPaQSbSDVaDQsvpWita3X2VZsNSJyOp2MQUaW4Ss7S0p88i6WLlsmhE9tsVjaXC5sEqkqo0ql0vJ9k3KmId3hkKRhtfC551geG/j5WWw1Inr7rbdYHkudl9ZpcZ/D4fBV90ugUjknSZAhCM3Nx7BJJDxRInH2bN5/j5Q5c6V4YM6cNZPlsZ4/X4HZ6HQ6GV3pvyQ+0ekzFbt2+/C9LHhqgRAvK4ObG/xaGXl3qDlXYmnmEsktX6BSyZiSgtnIaDCq1eoQbUinj5W+844kPnfyp7ml/q6MKpUqXq8nAUq6NuQXkEyHhfi52djS0sJoMLIEKBwOh88H2c178kneX1PSc4OgjERESSnJJEwDqeTEMTQ0lDEeP+jAT/T7Vf/cZxmLDTwGKHzrSnOEh4eTANMlJBpwhzJS++wg3vMw7eK4ymiUUMwxQKFY8UIWy5OK1ra+1nN+uMnMH5gYU9KGjAyWy0U3bdwooUCKWxz//nuokrRnegs0r42IiguL5qelSahZSqfTMZqN6sN2xcXf/C3x8vKa1cRfZqO+rk4kMxkfnzWLUO8NZfRYDsijIseJD8VIZdwxu9lIRIP3n/Irn3rl8uX/sf+HR4NRPMMXWDq7CfXe/qaMAQrF2nWvkpATPXVxcT73rOvr6lhCn+znRM+frwz40u4n22tbcfFu8y4eDUaHw+GFgYnEnIrk3TiwWCwYLSH5G7JiYmMFijZe61lHRUwwm0xe1sdWp9NsMkXcPz5x5qz83NxOm7vdOif6f3tOabsk+71ltVj+kf0S48PZRiOLwbhjewmJ7EZQwmgJKOPNrM/LI+HHwWca0jl99MJxarVYVxmNfxpzb6YhvT2exTITKCY2lj0kP+Tjn+QdcGxpaUlNTma/ZmTO3Dksx1V+bq6o3uaEyAm8v+aHFRUQJskrY4g2RIjaxtvp45/G3Lshv0CI+KPVYt2QXxBx/3hdXFxxYRF5NBMot8CNkqOgD090v+yS66ixlLlJjOFF7nxlmfW/5a0tJL6aLf6VcTeUURb3Tb/8ylpBxx3TTWU9uri4iPvHb8gvqK+r64oVabPZzCbTKqMxePgIXVxcfm5uB0lPFrNRpVLl5LMa0YrWtqGmH+Unji6Xa35qmpW5Ejt1XhpL04sIDUYh5vKhqpFkc0NWoFJZtH27Li6OvHvjWn5uLvdVUavVD0REcDPB2qeOD1CpuLhVm8t1+swZuubao6MNDc1NTTXVNeRmi86S55d1eoGiTqd7c/MbjB0anDieTBgmm7tiOFlkrF7kPruVWVlsOe4V4nzLj8+a5e5eIoZS9uTUFMiT5O8O5IbW3eyEek0ld5nNXkhZPrPgqd2Vezo1Irbt3DF+bJhblqM8xNFdWSSijZs3sfjRNptNPClpEvIKEPpvVziUUSa3qq7Myjpc+7nPu1kFxWKxmE2mTi/eValUpeVliTNnuSWOpx6929WnB0k55aKLi2OPLRJRttHIeGHeMwueInGP6eS3+NxisTgcjk7ve/Aan9fWsvd3evNMEu78UPAYcNm2c4duSpxI+hMEYu3qNZMnT+60viRs3DhDRgZ7XEzR2jbs3eOnpg69PChQistiO2mbOWO6W7IYr9czbmuzySTyE3dOUhLvMVBROdScWybClRduiboTr4WvZe+/J28b2263v/4a061eC/+60N3YfNCek32//VlyHTLmD0wx0dFuyaJarX49Zz2xFZauXb2GZHHFrrsONVxaknRu+gbPorS8TN5LVlxYxFI2FKBQvPHmm+5m7dWH7UP2nZJKwtrpdKYvXpzJNoftWlms2FvJEl4kohbfze4mvq/Yddehlkp3LJSRGMfwsFeuSJS05GSWaqFApbJib6W74qg87Rzxr+/F3yRjtVgmPvQQe/NfO0Xbt4sngkY8hZKEuDbro717oVDyUUYi0ickyNtytNvtjEUkKpXKA3EkoiEf/zRkr02cfTKcqaiLm+qWB/1/TmJ5GUv1ouRgueyQ3C/dxZ1ZslJGznKUtzjuMpsPVFUJKo7K085h7x6/s6Gl22+/k2jqcrYVF/95zL0emIqcLDImoyWHEM0wRFSBTkGZKaM/iOOCefNZWgY5cdy4eZNnnUKqhpa73/O9PrpcLvMHpqiICPYhEf4ji5xDbcjI4P1l39z8BkRKbsrIieOB6oPe7B30MrOmz2BsTwwbN84zy5GIFK1tqoaWkTua72xo8X5yxul0bsjP1waPykxP98B9JiK1Wi1vWSTBMtQWi6W+rg46JTdlJCKNRlNde8g7UyfIFwHHZ55+mjEYxLnVXWmzVTW0jPjX90P22pS2S0KbkC6Xq76uLn3x4j+PuZfxcqsOMtGyl0UiCtGGCDGUTzyTeqGM/DsauQX5ck1Y11TX7Nyxk73kc2tRURdnEChPO4d8/NPIHc13fXpaabvErxXpdDrr6+r+8ZJRGzwqceYsz+KJ7URGRe7/9IDMMtHk3StAGOc8ARJnDwwxJKzHhoVlLV/Oe/u9D9FqtcbVq9wyiAIUiuKSku3F24zZ2V381/scv9jn+EUicgUGXBrepzVIeaVfT1dvBXXvRm52sJw9e+ZQTU3lnkorf90mqfPSVmZlMdYtyoPJkycL8bLr172WW5APtZKnMnKedXFJyYGqqhXP/03qTYQeaCJd39U0Pjw8LTmZl3VQtLb1//Zc/2///2LCiyP6tPUK+FXdi65vVmn/848//nDs2LHPa2s9Cx126kGvXfdqTGysv32dApVKt7pC+Z3zBHik29WrPuhFa3U6X3/tNV/N5vGtJl5Lm8u1NHOJaKfIeOxB5xYU8OVB22y2mKhoIX7PnPy8ToeDeIDD4WCftETutJmzmI3Bw0f4j3gxrgmJNs54y6P1xezsrxu/EaLQQdBPoqKycnflHr7yCVwEdkvhVtmk77ONxuKSEv8JLNKtQslC5BsRbST5ZWA60MdFhsXi10e1Wm3IyDhQfTC3IF+I/o2Y2Nj9nx6Q1iFxy2Pj68ZvMFWQiJY8v4yEGQ+KtfULZbxWH63NTVsKtwp9E6EHjmFpeVl17aFFhsWCRnm4RThQfZD30fneCS9UVFbmFuSzXP7nD2g0GiHMRtQ2+pcytvuVMbGxuyv3fHGkPtto9K1ERkZFbinc+nXjN8UlJWHjxnktu8plqErLy8R2QnRgTefk5+2u3CPLVmgRmo3PPbsQndT+pYx0TZgmOTWFk8gthVu9ViKu1WoNGRml5WXW5qbikpKY2FhfWUBh48btrtxTWl4mZvtRq9WWlpfVfvmFEEkMmI10+84C9uJZQJLLTZP7Ccrmpqavv/r6+2PH+MrkarXaUaNHx06aGBKivfvuoeL0BG022/p1r4kqeR2v1yelJHutp6XV6dy3bx8JMytf0AiJcL95B6eR2WTyH/EKCgoSbh9KQxlv3nMtDscvl36xWi1EdP7c+SP19R3ZoQNU94WGcks5aPBgpVIpreRpq9N5+PDhwrff9mGRvFarTZw9Wxc/zZ/zzgA2IxAjDoejYtfu0nfe8dq9KGq1euFzz0EQAZQRSMaKPPjZZx/uruC9m4i7vzth+mN/vu8+CCKAMgKpquSJEyetVsvRhobmpiYPPO7IqEiVakDspIlBQUEjRo6EGgIAZZQhbS7X6TNnuD+3R2AzDent445CQrS97+hNREMGD/ariQ8AQBkB3dBR2/zDcawDACTFekYAAIAyAgAAlBEAAKCMAAAAZQQAACgjAABAGQEAAMoIAABQRgAAgDJiCQAAAMoIAABQRgAAgDICAACUEQAAoIwAAABlBAAAKCMAAEAZAQAAyggAAFBGAACAMgIAAJQRAACgjAAAAGUEAAAoIwAAQBkBAABAGQEAAMoIAABQRgAAgDICAACUEQAAoIwAAABlBAAAKCMAAEAZAQAAyggAAFBGAACAMgIAAJQRAACgjAAAAGUEAAC/ptvVq1exCgAAAJsRAACgjAAAAGUEAAAoIwAAQBkBAADKCAAAUEYAAPAl/wsxfv1fRkHYUQAAAABJRU5ErkJggg==" alt="CORE" />
+        <span class="brand-divider" aria-hidden="true"></span>
+        <div class="brand-copy">
+          <span class="brand-context">CORE Construction · Planning Intelligence</span>
+          <h1>Indiana School Debt Forecaster</h1>
+          <p id="scope-label">Indiana public school corporations</p>
+        </div>
+      </div>
+      <nav class="product-nav" aria-label="Debt forecaster views">
+        <a href="./overview.html">Opportunity overview</a>
+        <a href="./index.html" aria-current="page">District detail</a>
+      </nav>
+      <div class="topbar-meta">
+        <span>BUILDING FOR YOU.</span>
+        <div class="as-of" id="as-of">Loading data…</div>
+      </div>
+    </header>
+
+    <main>
+      <section class="control-panel" aria-label="Forecast controls">
+        <div class="control district-control">
+          <label for="district-search">School district</label>
+          <div class="district-picker">
+            <input
+              id="district-search"
+              type="search"
+              role="combobox"
+              autocomplete="off"
+              aria-autocomplete="list"
+              aria-expanded="false"
+              aria-controls="district-results"
+              placeholder="Search district or county"
+            />
+            <div id="district-results" class="district-results" role="listbox" hidden></div>
+          </div>
+          <div class="district-browse" aria-label="Browse districts by county">
+            <span>Or browse</span>
+            <div class="district-browse-fields">
+              <label class="browse-field" for="county-select">
+                <span>County</span>
+                <select id="county-select" aria-label="Choose a county"></select>
+              </label>
+              <label class="browse-field" for="district-select">
+                <span>School</span>
+                <select id="district-select" aria-label="Choose a school district"></select>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <fieldset class="control choice-control" id="scenario-control">
+          <legend>Scenario</legend>
+          <div class="segmented" role="group" aria-label="Forecast scenario">
+            <button type="button" data-scenario="Conservative">Conservative</button>
+            <button type="button" data-scenario="Base" class="active">Base</button>
+            <button type="button" data-scenario="Growth">Growth</button>
+          </div>
+        </fieldset>
+
+        <div class="control year-control">
+          <div class="control-heading">
+            <label for="start-year">Debt service begins</label>
+            <output id="start-year-output" for="start-year">2033</output>
+          </div>
+          <input id="start-year" type="range" min="2027" max="2036" step="1" value="2033" />
+          <div class="range-ends"><span>2027</span><span>2036</span></div>
+        </div>
+
+        <fieldset class="control choice-control compact-choice" id="term-control">
+          <legend>Term</legend>
+          <div class="segmented" role="group" aria-label="Debt term">
+            <button type="button" data-term="10">10 yr</button>
+            <button type="button" data-term="15">15 yr</button>
+            <button type="button" data-term="20" class="active">20 yr</button>
+          </div>
+        </fieldset>
+
+        <fieldset class="control choice-control" id="structure-control">
+          <legend>Structure</legend>
+          <div class="segmented" role="group" aria-label="Debt structure">
+            <button type="button" data-structure="level" class="active">Level service</button>
+            <button type="button" data-structure="wrapped">Annual wrap</button>
+          </div>
+        </fieldset>
+      </section>
+
+      <section class="decision-grid" aria-label="Selected forecast results">
+        <article class="metric-card primary-metric">
+          <p class="eyebrow" id="capacity-label">Base 20-year level-service capacity</p>
+          <strong id="capacity-value">—</strong>
+          <p id="capacity-compare">—</p>
+        </article>
+        <article class="metric-card">
+          <p class="eyebrow">Available service in <span id="selected-year-label">—</span></p>
+          <strong id="annual-space-value">—</strong>
+          <p id="annual-space-rate">—</p>
+        </article>
+        <article class="metric-card">
+          <p class="eyebrow">Largest ordinary opening</p>
+          <strong id="ordinary-drop-value">—</strong>
+          <p id="ordinary-drop-year">—</p>
+        </article>
+        <article class="metric-card referendum-card">
+          <p class="eyebrow">Largest referendum opening</p>
+          <strong id="referendum-drop-value">—</strong>
+          <p id="referendum-drop-year">—</p>
+        </article>
+        <article class="metric-card confidence-card">
+          <p class="eyebrow">Schedule reconciliation</p>
+          <strong id="confidence-value">—</strong>
+          <p id="confidence-detail">—</p>
+        </article>
+      </section>
+
+      <section class="workspace-grid">
+        <article class="panel chart-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="section-kicker">Debt runway</p>
+              <h2 id="district-heading">Scheduled service and rate capacity</h2>
+            </div>
+            <div class="legend" aria-label="Chart legend">
+              <span><i class="ordinary-key"></i>Ordinary debt</span>
+              <span><i class="referendum-key"></i>Referendum debt</span>
+              <span><i class="pension-key"></i>Pension debt</span>
+              <span><i class="target-key"></i>Ordinary levy at selected rate</span>
+            </div>
+          </div>
+          <div class="chart-wrap">
+            <svg id="debt-chart" viewBox="0 0 1060 390" role="img" aria-labelledby="chart-title chart-desc">
+              <title id="chart-title">Annual scheduled debt service</title>
+              <desc id="chart-desc">Stacked bars show ordinary, referendum, and pension debt service by year. A line shows projected ordinary debt levy at the selected rate.</desc>
+            </svg>
+            <div class="chart-tooltip" id="chart-tooltip" hidden></div>
+          </div>
+          <div class="chart-inspector" id="chart-inspector" aria-live="polite" hidden></div>
+          <div class="chart-note">
+            <span class="marker-line" aria-hidden="true"></span>
+            <div>
+              <p id="chart-note">Choose a service-start year to compare the available ordinary levy against the existing schedule.</p>
+              <span class="chart-instruction">Hover for the debt breakdown. Click a year to pin its obligations.</span>
+            </div>
+          </div>
+        </article>
+
+        <aside class="panel action-panel">
+          <p class="section-kicker">Opportunity reading</p>
+          <h2 id="signal-heading">What the next opening means</h2>
+          <div class="signal-box" id="signal-box"></div>
+          <dl class="fact-list">
+            <div><dt>Planning window</dt><dd id="planning-window">—</dd></div>
+            <div><dt>Selected interest rate</dt><dd id="interest-rate">—</dd></div>
+            <div><dt>Projected AV growth</dt><dd id="av-growth">—</dd></div>
+            <div><dt>2022–2026 AV CAGR</dt><dd id="av-cagr">—</dd></div>
+          </dl>
+          <div class="scenario-band" aria-label="Capacity range by scenario">
+            <div><span>Conservative</span><strong id="conservative-capacity">—</strong></div>
+            <div><span>Base</span><strong id="base-capacity">—</strong></div>
+            <div><span>Growth</span><strong id="growth-capacity">—</strong></div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="detail-grid">
+        <article class="panel tax-panel">
+          <div class="panel-heading compact-heading">
+            <div>
+              <p class="section-kicker">Tax context</p>
+              <h2>Certified rate versus collections</h2>
+            </div>
+            <span class="status-chip" id="protection-chip">—</span>
+          </div>
+          <div class="tax-rate-grid">
+            <div><span>2026 total rate</span><strong id="total-rate">—</strong></div>
+            <div><span>Ordinary debt rate</span><strong id="ordinary-rate">—</strong></div>
+            <div><span>Referendum debt rate</span><strong id="referendum-rate">—</strong></div>
+            <div><span>Operating referendum</span><strong id="operating-rate">—</strong></div>
+          </div>
+          <div class="loss-summary">
+            <div>
+              <span>Estimated unitwide circuit-breaker loss</span>
+              <strong id="total-loss">—</strong>
+            </div>
+            <div>
+              <span>Estimated loss charged to ordinary debt</span>
+              <strong id="ordinary-loss">—</strong>
+            </div>
+          </div>
+          <div class="loss-bar" id="loss-bar" aria-label="Circuit-breaker loss allocation"></div>
+          <p class="supporting-copy" id="tax-explanation"></p>
+        </article>
+
+        <article class="panel history-panel">
+          <div class="panel-heading compact-heading">
+            <div>
+              <p class="section-kicker">Tax base</p>
+              <h2>Assessed value and debt rate history</h2>
+            </div>
+          </div>
+          <div id="history-chart" class="history-chart" role="img" aria-label="Assessed value and ordinary debt rate history"></div>
+          <div class="history-foot">
+            <span>Historic AV growth informs the forecast, but the scenario assumption is capped at 5%.</span>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel issues-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="section-kicker">Outstanding obligations</p>
+            <h2>Bond and lease schedules</h2>
+          </div>
+          <div class="table-actions">
+            <span id="issue-count">—</span>
+            <button type="button" id="show-issues" class="text-button">Show all</button>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Issue</th>
+                <th scope="col">Purpose</th>
+                <th scope="col">Levy lane</th>
+                <th scope="col">Refunding</th>
+                <th scope="col" class="numeric">Scheduled service remaining</th>
+                <th scope="col">Final payment</th>
+              </tr>
+            </thead>
+            <tbody id="issues-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="method-panel">
+        <div>
+          <p class="section-kicker">How to read the model</p>
+          <h2>Three figures, three different questions</h2>
+        </div>
+        <div class="method-grid">
+          <article>
+            <span>1</span>
+            <h3>Level-service capacity</h3>
+            <p>Uses the smallest annual opening across the term. It is the conservative structure and can understate a stepped repayment plan.</p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>Annual wrapped capacity</h3>
+            <p>Fits new payments into each year’s projected opening. It is a ceiling for structuring discussions, not a borrowing recommendation.</p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>Referendum replacement</h3>
+            <p>Shows debt service that may roll off but cannot be treated as ordinary capacity without the required voter and legal approvals.</p>
+          </article>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-copy">
+          <strong>CORE Construction · BUILDING FOR YOU.</strong>
+          <p>This is a screening tool, not legal, municipal-advisor, tax, or bond-sale advice. Confirm current debt status, call provisions, tax treatment, cash balances, approvals, and market pricing before acting.</p>
+        </div>
+        <nav aria-label="Data sources">
+          <a id="gateway-source" target="_blank" rel="noreferrer">Indiana Gateway debt reports</a>
+          <a id="dlgf-source" target="_blank" rel="noreferrer">DLGF certified rates and levies</a>
+          <a id="guidance-source" target="_blank" rel="noreferrer">DLGF debt guidance</a>
+        </nav>
+      </footer>
+    </main>
+
+    <div class="loading-state" id="loading-state" role="status">Preparing district forecasts…</div>
+    <noscript><style>#loading-state { display: none; }</style><p class="panel">Please enable JavaScript to view the Indiana dashboard.</p></noscript>
+    <script src="./app.js" defer></script>
+  </body>
+</html>
