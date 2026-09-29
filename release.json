@@ -1,0 +1,15 @@
+{
+  "name": "Indiana School Debt Forecaster",
+  "modelAsOf": "2026-09-17",
+  "debtSnapshot": "2026-09-15",
+  "districtCount": 290,
+  "capturedIssueCount": 2152,
+  "parsedScheduleCount": 2077,
+  "missingScheduleCount": 75,
+  "preservedFiles": {
+    "site-data.json": "e865bc0a5fb93916e00fb877d4312ee689e7305dc60bb6e2b649ee60a42f8a83",
+    "app.js": "3076db363191d0a424fdac3f3992239e067c34f336dd24c480a6b69790553d1b",
+    "overview.js": "6f24af1a24189e48987477c7607aec41ccb68e40bdaa77431d2de9c3d23ed0ee"
+  },
+  "notes": "Indiana snapshot and forecast scripts preserved from the established dashboard; standalone HTML omits other-state and Client Intelligence navigation."
+}

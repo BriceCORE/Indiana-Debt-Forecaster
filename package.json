@@ -1,0 +1,13 @@
+{
+  "name": "indiana-debt-forecaster",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Standalone Indiana School Debt Forecaster for static hosting",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node scripts/preview.mjs",
+    "check": "node scripts/check.mjs",
+    "test:browser": "node test/browser-smoke.mjs"
+  }
+}
